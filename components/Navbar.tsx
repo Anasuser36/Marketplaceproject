@@ -49,23 +49,18 @@ const Header: React.FC = () => {
 
               {isOpen && (
                 <div className="absolute right-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg  z-50">
+               
                   <a
-                    href="#"
+                    href="/AllProducts"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
-                    Web Development
+                    Sale 2025
                   </a>
                   <a
-                    href="#"
+                    href="/AllProducts"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
-                    Graphic Design
-                  </a>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Digital Marketing
+                   All products
                   </a>
                 </div>
               )}
@@ -79,7 +74,7 @@ const Header: React.FC = () => {
             </li>
 
             <li>
-              <Link href="/services" className="text-black hover:text-gray-300">
+              <Link href="/Allblogs" className="text-black hover:text-gray-300">
                 Blog
               </Link>
             </li>

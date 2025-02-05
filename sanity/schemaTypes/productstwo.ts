@@ -11,6 +11,15 @@ export default defineType({
         type: 'string',
         },
         {
+            name: 'slug',
+            type: 'slug',
+            title: 'Slug',
+            options: {
+              source: 'name', // Automatically generates slug based on the title
+              maxLength: 96,   // Optional: limit the length of the slug
+            },
+          },
+        {
         name: 'price',
         title: 'Price',
         type: 'number',
@@ -40,6 +49,19 @@ export default defineType({
             }
         },
         {
+            name:"maincategory",
+            title:"MainCategory",
+            type: 'string',
+            options:{
+                list:[
+                   {title: 'Men', value: 'men'},
+                   {title: 'Women', value: 'women'}, 
+                   {title: 'Kids', value: 'kids'} ,
+                   {title: 'Accessories', value: 'accessories'} ,
+                ]
+            }
+        },
+        {
             name:"discountPercent",
             title:"Discount Percent",
             type: 'number',
@@ -57,6 +79,12 @@ export default defineType({
                 {type: 'string'}
             ]
         },
+        {
+            name: "productimages",
+            title: "productimages",
+            type: "array",
+            of: [{ type: "image" }],
+          },
         {
             name:"sizes",
             title:"Sizes",

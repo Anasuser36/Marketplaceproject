@@ -1,14 +1,23 @@
 import React from "react";
+import { client } from "@/sanity/lib/client";
+import { urlFor } from "@/sanity/lib/image";
+import Image from "next/image";
+
+import Link from 'next/link';
 
 const GridWithImages: React.FC = () => {
+
+ 
+
+
   return (
     <div className="bg-[#FAFAFA] grid grid-cols-4 gap-4 p-4">
 
       {/* Grid Item 1 */}
 
       <div className="col-span-4" > 
-      <h1 className="font-bold text-[24px] text-center"> EDITOR'S PICK </h1>
-      <p className="text-center"> Problems trying to resolve the conflict between </p>
+      <h1 className="font-bold text-[24px] text-center"> Products By Categories</h1>
+      <p className="text-center"> Select the product as per your need , we have differnt categories of products </p>
        </div>
 
 

@@ -1,6 +1,22 @@
 import React from "react";
+import { client } from "@/sanity/lib/client";
+import { urlFor } from "@/sanity/lib/image";
+import Link from 'next/link';
 
-const GridWithImages: React.FC = () => {
+const async GridWithImages: React.FC = () => {
+
+  const fetchProducts = `
+*[_type=="post"]{
+    title,
+    author, 
+    mainImag,
+    body,
+    slug
+}
+  `;
+  const sanityData = await client.fetch(fetchProducts)
+
+
   return (
     <div className="grid grid-cols-3 gap-2 p-4">
       {/* Grid Item 1 */}
